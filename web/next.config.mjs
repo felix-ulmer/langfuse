@@ -27,6 +27,7 @@ const cspHeader = `
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  basePath: env.LANGFUSE_PATH,
   transpilePackages: ["@langfuse/shared"],
   reactStrictMode: true,
 

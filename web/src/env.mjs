@@ -28,6 +28,7 @@ export const env = createEnv({
     LANGFUSE_TEAM_SLACK_WEBHOOK: z.string().url().optional(),
     LANGFUSE_TEAM_BETTERSTACK_TOKEN: z.string().optional(),
     LANGFUSE_NEW_USER_SIGNUP_WEBHOOK: z.string().url().optional(),
+    LANGFUSE_PATH: z.string().optional(),
     // Add `.min(1) on ID and SECRET if you want to make sure they're not empty
     LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES: z.enum(["true", "false"]).optional(),
     SALT: z.string({
@@ -126,6 +127,7 @@ export const env = createEnv({
       process.env.LANGFUSE_TEAM_BETTERSTACK_TOKEN,
     LANGFUSE_NEW_USER_SIGNUP_WEBHOOK:
       process.env.LANGFUSE_NEW_USER_SIGNUP_WEBHOOK,
+    LANGFUSE_PATH: process.env.LANFUSE_PATH,
     SALT: process.env.SALT,
     LANGFUSE_CSP_ENFORCE_HTTPS: process.env.LANGFUSE_CSP_ENFORCE_HTTPS,
     // Default project and role
